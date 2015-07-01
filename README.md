@@ -1,0 +1,2 @@
+# CakeMania
+Simple EJB
