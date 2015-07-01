@@ -1,8 +1,8 @@
 # CakeMania
 Simple EJB
-&lt;&lt;Intro&gt;&gt;
-&lt;&lt;Deployment&gt;&gt;
-
-Sketch -&gt; Technology requirement -&gt;
--&gt; Simple Diagram -&gt; Developing -&gt;
--&gt; Deployment
+&lt;&lt;Intro&gt;&gt;<br/>
+&lt;&lt;Deployment&gt;&gt;<br/>
+<br/>
+Sketch -&gt; Technology requirement -&gt;<br/>
+-&gt; Simple Diagram -&gt; Developing -&gt;<br/>
+-&gt; Deployment<br/>
