@@ -1,5 +1,5 @@
 # CakeMania
-Simple EJB
+Simple EJB<br/>
 &lt;&lt;Intro&gt;&gt;<br/>
 &lt;&lt;Deployment&gt;&gt;<br/>
 <br/>
