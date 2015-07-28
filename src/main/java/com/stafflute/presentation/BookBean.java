@@ -60,4 +60,8 @@ public class BookBean {
         bookService.addBook(book);
         return "success";
     }
+    
+    public Book getBook(Integer id) {
+    	return bookService.getBook(id);
+    }
 }

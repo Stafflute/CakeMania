@@ -41,4 +41,8 @@ public class BookService {
         cq.select(cq.from(Book.class));
         return entityManager.createQuery(cq).getResultList();
     }
+    
+    public Book getBook(Integer id) {
+    	return entityManager.find(Book.class, id);
+    }
 }

@@ -20,6 +20,18 @@
 			<scope>provided</scope>
 		</dependency>
 
+		<!-- SEO friendly link -->
+		<dependency>
+			<groupId>org.ocpsoft.rewrite</groupId>
+			<artifactId>rewrite-servlet</artifactId>
+			<version>2.0.12.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>org.ocpsoft.rewrite</groupId>
+			<artifactId>rewrite-config-prettyfaces</artifactId>
+			<version>2.0.12.Final</version>
+		</dependency>
+
 		<!-- to test with TomEE and Arquillian <dependency> <groupId>org.apache.openejb</groupId> 
 			<artifactId>arquillian-tomee-remote</artifactId> <version>1.7.0</version> 
 			<scope>test</scope> </dependency> <dependency> <groupId>org.jboss.arquillian.junit</groupId> 
@@ -91,7 +103,7 @@
 					</dependency>
 				</dependencies>
 			</plugin>
-			
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-enforcer-plugin</artifactId>
