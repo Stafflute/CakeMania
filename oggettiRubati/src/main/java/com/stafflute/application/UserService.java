@@ -14,39 +14,35 @@
  *   See the License for the specific language governing permissions and
  *   limitations under the License.
  */
-package com.stafflute.entities;
+package com.stafflute.application;
 
-import javax.persistence.*;
+import com.stafflute.entities.User;
 
-@Entity
-public class Book {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int bookId;
-    private String bookTitle;
+import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.criteria.CriteriaQuery;
+import java.util.List;
 
-    public int getBookId() {
-        return bookId;
+@Stateless
+public class UserService {
+
+    @PersistenceContext(unitName = "oggettiRubati-pu")
+    private EntityManager entityManager;
+
+    public void addBook(User book)
+    {
+      entityManager.persist(book);
     }
 
-    public void setBookId(int bookId) {
-        this.bookId = bookId;
+    public List<User> getAllBooks()
+    {
+        CriteriaQuery<User> cq = entityManager.getCriteriaBuilder().createQuery(User.class);
+        cq.select(cq.from(User.class));
+        return entityManager.createQuery(cq).getResultList();
     }
-
-    public String getBookTitle() {
-        return bookTitle;
-    }
-
-    public void setBookTitle(String bookName) {
-        this.bookTitle = bookName;
-    }
-
-    @Override
-    public String toString() {
-        return "Book{" +
-                "bookId=" + bookId +
-                ", bookTitle='" + bookTitle + '\'' +
-                '}';
+    
+    public User getBook(Integer id) {
+    	return entityManager.find(User.class, id);
     }
 }
-

@@ -16,19 +16,19 @@
  */
 package com.stafflute.presentation;
 
-import com.stafflute.application.BookService;
-import com.stafflute.entities.Book;
+import com.stafflute.application.UserService;
+import com.stafflute.entities.User;
 
 import javax.inject.Inject;
 import javax.inject.Named;
 import java.util.List;
 
 @Named
-public class BookBean {
+public class UserBean {
 
     @Inject
-    private BookService bookService;
-    private List<Book> booksAvailable;
+    private UserService bookService;
+    private List<User> booksAvailable;
     private String bookTitle;
 
     public String getBookTitle() {
@@ -39,11 +39,11 @@ public class BookBean {
         this.bookTitle = bookTitle;
     }
 
-    public List<Book> getBooksAvailable() {
+    public List<User> getBooksAvailable() {
         return booksAvailable;
     }
 
-    public void setBooksAvailable(List<Book> booksAvailable) {
+    public void setBooksAvailable(List<User> booksAvailable) {
         this.booksAvailable = booksAvailable;
     }
 
@@ -55,13 +55,13 @@ public class BookBean {
 
     public String add()
     {
-        Book book = new Book();
+        User book = new User();
         book.setBookTitle(bookTitle);
         bookService.addBook(book);
         return "success";
     }
     
-    public Book getBook(Integer id) {
+    public User getBook(Integer id) {
     	return bookService.getBook(id);
     }
 }
