@@ -20,6 +20,14 @@
 			<scope>provided</scope>
 		</dependency>
 
+		<dependency>
+			<groupId>javax.faces</groupId>
+			<artifactId>jsf-api</artifactId>
+			<version>2.0</version>
+			<scope>provided</scope>
+		</dependency>
+
+
 		<!-- SEO friendly link -->
 		<dependency>
 			<groupId>org.ocpsoft.rewrite</groupId>
@@ -32,19 +40,43 @@
 			<version>2.0.12.Final</version>
 		</dependency>
 
-		<!-- to test with TomEE and Arquillian <dependency> <groupId>org.apache.openejb</groupId> 
-			<artifactId>arquillian-tomee-remote</artifactId> <version>1.7.0</version> 
-			<scope>test</scope> </dependency> <dependency> <groupId>org.jboss.arquillian.junit</groupId> 
-			<artifactId>arquillian-junit-container</artifactId> <version>1.1.5.Final</version> 
-			<scope>test</scope> </dependency> <dependency> <groupId>junit</groupId> <artifactId>junit</artifactId> 
-			<version>4.11</version> <scope>test</scope> </dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.apache.openejb</groupId> -->
+		<!-- <artifactId>arquillian-tomee-remote</artifactId> -->
+		<!-- <version>1.7.0</version> -->
+		<!-- <scope>test</scope> -->
+		<!-- </dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.jboss.arquillian.junit</groupId> -->
+		<!-- <artifactId>arquillian-junit-container</artifactId> -->
+		<!-- <version>1.1.5.Final</version> -->
+		<!-- <scope>test</scope> -->
+		<!-- </dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>junit</groupId> -->
+		<!-- <artifactId>junit</artifactId> -->
+		<!-- <version>4.11</version> -->
+		<!-- <scope>test</scope> -->
+		<!-- </dependency> -->
 
-		<!-- to test with OpenEJB embedded and Arquillian <dependency> <groupId>org.apache.openejb</groupId> 
-			<artifactId>arquillian-openejb-embedded-4</artifactId> <version>4.7.0</version> 
-			<scope>test</scope> </dependency> <dependency> <groupId>org.jboss.arquillian.junit</groupId> 
-			<artifactId>arquillian-junit-container</artifactId> <version>1.1.5.Final</version> 
-			<scope>test</scope> </dependency> <dependency> <groupId>junit</groupId> <artifactId>junit</artifactId> 
-			<version>4.11</version> <scope>test</scope> </dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.apache.openejb</groupId> -->
+		<!-- <artifactId>arquillian-openejb-embedded-4</artifactId> -->
+		<!-- <version>4.7.0</version> -->
+		<!-- <scope>test</scope> -->
+		<!-- </dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.jboss.arquillian.junit</groupId> -->
+		<!-- <artifactId>arquillian-junit-container</artifactId> -->
+		<!-- <version>1.1.5.Final</version> -->
+		<!-- <scope>test</scope> -->
+		<!-- </dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>junit</groupId> -->
+		<!-- <artifactId>junit</artifactId> -->
+		<!-- <version>4.11</version> -->
+		<!-- <scope>test</scope> -->
+		<!-- </dependency> -->
 	</dependencies>
 
 	<build>
