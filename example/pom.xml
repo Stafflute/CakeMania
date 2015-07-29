@@ -4,10 +4,10 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.stafflute</groupId>
-	<artifactId>oggettiRubati</artifactId>
+	<artifactId>oggettiRubatiExample</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>oggettiRubati TomEE Webapp</name>
+	<name>oggettiRubati Example</name>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
