@@ -11,6 +11,7 @@ import com.github.perceptron8.datetime.jpa.LocalDateTimeToTimestampConverter;
 import com.stafflute.entities.user.Utente;
 import javax.persistence.ManyToOne;
 import javax.persistence.PrimaryKeyJoinColumn;
+import javax.persistence.Table;
 
 import static javax.persistence.FetchType.LAZY;
 
@@ -28,7 +29,7 @@ import javax.persistence.Lob;
 public class Oggetto {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
     
     /**
@@ -54,7 +55,6 @@ public class Oggetto {
      * Descrizione del prodotto
      */
     @Basic(fetch = LAZY)
-	@Lob
 	private String descrizione;
     
     /**
