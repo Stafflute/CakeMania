@@ -16,12 +16,13 @@
  */
 package com.stafflute.application;
 
-import com.stafflute.entities.User;
-
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.criteria.CriteriaQuery;
+
+import com.stafflute.entities.user.Utente;
+
 import java.util.List;
 
 @Stateless
@@ -30,19 +31,19 @@ public class UserService {
     @PersistenceContext(unitName = "oggettiRubati-pu")
     private EntityManager entityManager;
 
-    public void addBook(User book)
+    public void addBook(Utente book)
     {
       entityManager.persist(book);
     }
 
-    public List<User> getAllBooks()
+    public List<Utente> getAllBooks()
     {
-        CriteriaQuery<User> cq = entityManager.getCriteriaBuilder().createQuery(User.class);
-        cq.select(cq.from(User.class));
+        CriteriaQuery<Utente> cq = entityManager.getCriteriaBuilder().createQuery(Utente.class);
+        cq.select(cq.from(Utente.class));
         return entityManager.createQuery(cq).getResultList();
     }
     
-    public User getBook(Integer id) {
-    	return entityManager.find(User.class, id);
+    public Utente getBook(Integer id) {
+    	return entityManager.find(Utente.class, id);
     }
 }

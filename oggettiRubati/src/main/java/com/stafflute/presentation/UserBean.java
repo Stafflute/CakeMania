@@ -17,7 +17,7 @@
 package com.stafflute.presentation;
 
 import com.stafflute.application.UserService;
-import com.stafflute.entities.User;
+import com.stafflute.entities.user.Utente;
 
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -28,7 +28,7 @@ public class UserBean {
 
     @Inject
     private UserService bookService;
-    private List<User> booksAvailable;
+    private List<Utente> booksAvailable;
     private String bookTitle;
 
     public String getBookTitle() {
@@ -39,11 +39,11 @@ public class UserBean {
         this.bookTitle = bookTitle;
     }
 
-    public List<User> getBooksAvailable() {
+    public List<Utente> getBooksAvailable() {
         return booksAvailable;
     }
 
-    public void setBooksAvailable(List<User> booksAvailable) {
+    public void setBooksAvailable(List<Utente> booksAvailable) {
         this.booksAvailable = booksAvailable;
     }
 
@@ -55,13 +55,13 @@ public class UserBean {
 
     public String add()
     {
-        User book = new User();
-        book.setBookTitle(bookTitle);
+        Utente book = new Utente();
+        book.setUsername(bookTitle);
         bookService.addBook(book);
         return "success";
     }
     
-    public User getBook(Integer id) {
+    public Utente getBook(Integer id) {
     	return bookService.getBook(id);
     }
 }
