@@ -1,6 +1,5 @@
 package com.stafflute;
 
-import javax.ejb.EJB;
 import javax.inject.Inject;
 
 import org.jboss.arquillian.container.test.api.Deployment;
@@ -20,7 +19,7 @@ import com.stafflute.entities.user.Utente;
 @RunWith(Arquillian.class)
 public class ExampleTest {
 
-    @Deployment(testable = false)
+    @Deployment
     public static WebArchive createDeployment() {  	
     	WebArchive archive = ShrinkWrap.create(WebArchive.class)
                 .addPackage("com.stafflute")
