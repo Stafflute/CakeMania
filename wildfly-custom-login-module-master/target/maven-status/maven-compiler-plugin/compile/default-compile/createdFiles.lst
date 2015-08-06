@@ -1,0 +1,3 @@
+com\cortez\wildfly\security\servlet\AuthenticateServlet.class
+com\cortez\wildfly\security\CustomLoginModule.class
+com\cortez\wildfly\security\CustomPrincipal.class
