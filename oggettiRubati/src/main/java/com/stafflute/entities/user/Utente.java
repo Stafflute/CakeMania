@@ -1,5 +1,7 @@
 package com.stafflute.entities.user;
 
+import java.util.Set;
+
 import javax.persistence.*;
 
 /**
@@ -9,14 +11,16 @@ import javax.persistence.*;
  */
 @Entity
 public class Utente {
-    @Id
+    
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(unique = true)
     private Integer id;
     
     /**
      * Unique username
      */
-    @Column(nullable = false, length = 32, unique = true)
+    @Id
+    @Column(nullable = false, length = 32)
     private String username;
     
     /**
@@ -30,6 +34,12 @@ public class Utente {
      */
     @Column(nullable = false, length = 128)
     private String salt;
+    
+    /**
+     * I ruoli assunti da un utente
+     */
+    @ManyToMany
+	private Set<Ruolo> ruolo;
 
 	public Integer getId() {
 		return id;
@@ -61,6 +71,14 @@ public class Utente {
 
 	public void setSalt(String salt) {
 		this.salt = salt;
+	}
+
+	public Set<Ruolo> getRuolo() {
+		return ruolo;
+	}
+
+	public void setRuolo(Set<Ruolo> ruolo) {
+		this.ruolo = ruolo;
 	}
     
     
