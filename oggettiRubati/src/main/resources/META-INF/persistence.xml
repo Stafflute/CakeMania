@@ -4,11 +4,11 @@
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
 http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
 	version="2.1">
-	<persistence-unit name="oggettiRubati-pu"
+	<persistence-unit name="postgres-pu"
 		transaction-type="JTA">
 		<jta-data-source>java:/PostgresXAGeneralDS</jta-data-source>
 		<properties>
-			<property name="hibernate.hbm2ddl.auto" value="create" />
+<!-- 			<property name="hibernate.hbm2ddl.auto" value="create" /> -->
 			<property name="hibernate.show_sql" value="true"/>
 			<property name="hibernate.use_sql_comments" value="true"/>
 		</properties>

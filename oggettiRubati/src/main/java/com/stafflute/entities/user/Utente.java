@@ -3,6 +3,8 @@ package com.stafflute.entities.user;
 import java.util.Set;
 
 import javax.persistence.*;
+import static javax.persistence.CascadeType.DETACH;
+import static javax.persistence.FetchType.EAGER;
 
 /**
  * Classe utilizzata per l'autenticazione
@@ -38,7 +40,7 @@ public class Utente {
     /**
      * I ruoli assunti da un utente
      */
-    @ManyToMany
+    @ManyToMany(cascade = DETACH, fetch = EAGER)
 	private Set<Ruolo> ruolo;
 
 	public Integer getId() {

@@ -71,6 +71,13 @@
 			<scope>provided</scope>
 		</dependency>
 
+		<dependency>
+			<groupId>org.picketbox</groupId>
+			<artifactId>picketbox</artifactId>
+			<version>4.9.2.Final</version>
+			<scope>provided</scope>
+		</dependency>
+
 		<!-- SEO friendly link -->
 		<dependency>
 			<groupId>org.ocpsoft.rewrite</groupId>

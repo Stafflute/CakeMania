@@ -49,7 +49,7 @@ public class UserBean {
 
     public String fetchBooks()
     {
-        booksAvailable=bookService.getAllBooks();
+        //booksAvailable=bookService.getAllBooks();
         return "success";
     }
 
@@ -57,11 +57,11 @@ public class UserBean {
     {
         Utente book = new Utente();
         book.setUsername(bookTitle);
-        bookService.addBook(book);
+        //bookService.addBook(book);
         return "success";
     }
     
     public Utente getBook(Integer id) {
-    	return bookService.getBook(id);
+    	return null; //bookService.getBook(id);
     }
 }

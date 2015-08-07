@@ -28,22 +28,12 @@ import java.util.List;
 @Stateless
 public class UserService {
 
-    @PersistenceContext(unitName = "oggettiRubati-pu")
-    private EntityManager entityManager;
+	@PersistenceContext(unitName = "postgres-pu")
+	private EntityManager entityManager;
 
-    public void addBook(Utente book)
-    {
-      entityManager.persist(book);
-    }
-
-    public List<Utente> getAllBooks()
-    {
-        CriteriaQuery<Utente> cq = entityManager.getCriteriaBuilder().createQuery(Utente.class);
-        cq.select(cq.from(Utente.class));
-        return entityManager.createQuery(cq).getResultList();
-    }
-    
-    public Utente getBook(Integer id) {
-    	return entityManager.find(Utente.class, id);
-    }
+	public Utente getUtente(String username) {
+		Utente utente = entityManager.find(Utente.class, username);
+		//entityManager.detach(utente);
+		return utente;
+	}
 }

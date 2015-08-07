@@ -13,7 +13,7 @@ import java.util.List;
 @Stateless
 public class TestService {
 
-    @PersistenceContext(unitName = "oggettiRubati-pu")
+    @PersistenceContext(unitName = "postgres-pu")
     private EntityManager entityManager;
 
     public void addEntity()
