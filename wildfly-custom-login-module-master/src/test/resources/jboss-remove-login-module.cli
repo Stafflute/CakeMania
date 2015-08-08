@@ -1,5 +1,0 @@
-connect
-
-/subsystem=security/security-domain=CustomSecurityDomain:remove
-
-reload
